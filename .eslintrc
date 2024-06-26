@@ -1,0 +1,78 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended", // eslint推荐配置
+    "plugin:vue/vue3-essential", // .vue文件应用eslint检查，使用基础版(eslint-plugin-vue)
+    "@vue/typescript/recommended" // .vue文件eslint可以解析typescript
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
+  "rules": {
+    // js ts
+    "eqeqeq": ["error", "always"],
+    "no-else-return": "warn",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-extend-native": "error",
+    "no-useless-return": "warn",
+    "prefer-const": "warn",
+    "prefer-destructuring": ["warn", {"object": true, "array": false}],
+    "prefer-arrow-callback": ["warn", {"allowNamedFunctions": false, "allowUnboundThis": false}],
+    "no-var": "warn",
+    "no-useless-computed-key": "warn",
+    "no-undef": "off",
+
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-this-alias": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+
+    // 下面是vue特殊规则
+    // 普通
+    "vue/multi-word-component-names": "off",
+    // vue-strongly-recommended,为啥直接用那个set，因为和prettier冲突了
+    "vue/attribute-hyphenation": "warn",
+    "vue/component-definition-name-casing": ["warn", "PascalCase"],
+    "vue/html-self-closing": ["warn", {"html": {"void": "always"}}], // 所有标签都要闭合
+    "vue/no-template-shadow": "warn",
+    "vue/prop-name-casing": "warn",
+    "vue/require-default-prop": "warn",
+    "vue/v-bind-style": "warn",
+    "vue/v-on-style": "warn",
+    "vue/v-slot-style": "warn",
+    "vue/require-explicit-emits": "error",
+    // recommended
+    "vue/attributes-order": "warn",
+    "vue/no-lone-template": "error",
+    "vue/no-multiple-slot-args": "error",
+    "vue/order-in-components": "warn",
+    "vue/this-in-template": "error",
+    // uncategorized
+    "vue/custom-event-name-casing": "warn",
+    "vue/html-button-has-type": "warn",
+    "vue/match-component-file-name": "error",
+    "vue/next-tick-style": "warn",
+    "vue/no-deprecated-v-is": "error",
+    "vue/no-invalid-model-keys": "error",
+    "vue/no-multiple-objects-in-class": "error",
+    "vue/no-potential-component-option-typo": "error",
+    "vue/no-reserved-component-names": "error",
+    "vue/no-static-inline-styles": "error",
+    "vue/no-this-in-before-route-enter": "error",
+    "vue/no-unsupported-features": ["error",{"version": "^3.0.5"}],
+    "vue/no-unused-refs": "warn",
+    "vue/no-useless-mustaches": "error",
+    "vue/no-useless-v-bind": "error",
+    "vue/require-direct-export": "error",
+    "vue/require-name-property": "error",
+    "vue/v-for-delimiter-style": "error",
+    "vue/v-on-event-hyphenation": "error",
+    "vue/v-on-function-call": "warn",
+    "vue/valid-next-tick": "error"
+  }
+}

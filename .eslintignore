@@ -1,0 +1,8 @@
+old-src
+
+node_modules
+dist
+pnpm-lock.yaml
+!.*
+docs/components.d.ts
+

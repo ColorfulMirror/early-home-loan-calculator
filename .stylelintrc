@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "stylelint-config-recommended-scss",
+    "stylelint-config-recommended-vue",
+    "stylelint-config-rational-order"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.scss",
+        "**/*.scss",
+        "*.vue",
+        "**/*.vue"
+      ]
+    }
+  ],
+  "rules": {
+    "no-empty-source": null,
+    "alpha-value-notation": "number",
+    "hue-degree-notation": "angle",
+    "length-zero-no-unit": true,
+    "shorthand-property-no-redundant-values": true,
+    "value-no-vendor-prefix": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "color-hex-length": "short",
+    "value-keyword-case": "lower",
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "/^i-/"
+        ]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": null,
+    "selector-pseudo-class-no-unknown": null,
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": null,
+    "plugin/rational-order": [
+      true,
+      {
+        "border-in-box-model": true,
+        "empty-line-between-groups": true
+      }
+    ]
+  }
+}
